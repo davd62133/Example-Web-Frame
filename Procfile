@@ -1,1 +1,1 @@
-web: java -cp target/dependency/*;target/classes CalculadoraApplication
+web: java -cp target/classes;target/dependency/* CalculadoraApplication
