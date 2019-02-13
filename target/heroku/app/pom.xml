@@ -58,7 +58,7 @@
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
                         <!-- You might have to remove the ./ in front   -->
-                        <web>java -jar target/CalculadoraWebFrame-1.0-SNAPSHOT.jar</web>
+                        <web>java -cp target/dependency/*;target/classes CalculadoraApplication</web>
                     </processTypes>
                 </configuration>
             </plugin>

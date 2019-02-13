@@ -34,7 +34,7 @@
           <jdkVersion>1.8</jdkVersion>
           <appName>example-webframe</appName>
           <processTypes>
-            <web>java -jar target/CalculadoraWebFrame-1.0-SNAPSHOT.jar</web>
+            <web>java -cp target/dependency/*;target/classes CalculadoraApplication</web>
           </processTypes>
         </configuration>
       </plugin>
