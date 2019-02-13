@@ -3,7 +3,7 @@ import Applications.WebFrameApplication;
 
 public class CalculadoraApplication {
     public static void main(String args[]){
-        WebFrameApplication.run(CalculadoraApplication.class,35000,args);
+        WebFrameApplication.run(CalculadoraApplication.class,Integer.parseInt(System.getenv("PORT")),args);
     }
 
     @WebGet("/cuadrado")
