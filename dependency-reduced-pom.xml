@@ -34,7 +34,7 @@
           <jdkVersion>1.8</jdkVersion>
           <appName>example-webframe</appName>
           <processTypes>
-            <web>java -cp target/dependency/*;target/classes CalculadoraApplication</web>
+            <web>java $JAVA_OPTS -cp target/classes:target/dependency/* CalculadoraApplication</web>
           </processTypes>
         </configuration>
       </plugin>
@@ -84,15 +84,14 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <groupId>eci</groupId>
-      <artifactId>WebFrame</artifactId>
-      <version>1.0-SNAPSHOT</version>
-      <scope>system</scope>
-      <systemPath>${basedir}/lib/WebFrame-1.0-SNAPSHOT.jar</systemPath>
-    </dependency>
-  </dependencies>
+  <repositories>
+    <repository>
+      <snapshots />
+      <id>project.local</id>
+      <name>project</name>
+      <url>file:${project.basedir}/lib</url>
+    </repository>
+  </repositories>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
